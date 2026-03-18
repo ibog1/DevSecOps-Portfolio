@@ -3,6 +3,7 @@
 This challenge demonstrates a persistent Cross-Site Scripting (XSS) vulnerability in OWASP Juice Shop.  
 By intercepting and modifying a registration request in Burp Suite, it is possible to bypass the client-side validation and store a malicious payload in the backend.
 
+> [!WARNING] 
 > **Educational use only:** This documentation was created for learning purposes in a controlled local OWASP Juice Shop environment. No real personal data, production systems, or sensitive credentials were used.
 
 ## Table of Contents
