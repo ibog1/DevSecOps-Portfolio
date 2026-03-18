@@ -1,4 +1,3 @@
-
 # Payback Time Challenge
 
 This challenge demonstrates an improper input validation vulnerability in the basket and checkout process of OWASP Juice Shop.  
