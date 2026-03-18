@@ -5,6 +5,7 @@ The goal of this project is to demonstrate common web security vulnerabilities i
 All content in this repository was created for educational purposes only.  
 No real personal data, production credentials, or sensitive infrastructure information were used.
 
+
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
@@ -23,45 +24,45 @@ To view or reproduce the challenges, the following tools are recommended:
 - Burp Suite Community Edition
 - OWASP Juice Shop
 
+
 ## What is OWASP Juice Shop
 
 OWASP Juice Shop is a deliberately insecure web application created for learning and practicing web application security.  
 It includes many realistic vulnerabilities such as SQL injection, broken authentication, access control issues, and sensitive data exposure.
 
+
 ## Quickstart
 
-If you only want to access the running application in a browser, open the following address:
+To reproduce the documented challenges, set up and run OWASP Juice Shop separately on a Linux machine such as Kali Linux.
 
+1. Install the required tools:
 ```
-https://juice-shop.herokuapp.com/#
-```
-## Usage 
-You can also Start your own Owasp Juice Shop Instance on your Compouter. 
-
-1. Install Perequireties 
-``` bash
-sudo apt install nodejs npm
+sudo apt install nodejs
+sudo apt install npm
 ```
 
-1. Clone the following Repository 
-``` bash
-git clone https://github.com/ibog1/Juice-Shop-Master
+2. Clone the official OWASP Juice Shop repository:
+```
+git clone https://github.com/juice-shop/juice-shop.git
 ```
 
-
-2. Navigate to the Correct Directory. 
-```bash
-cd Juice-Shop-Master
+3. Change into the project directory:
+```
+cd juice-shop
 ```
 
-
-3. Start the Juice Shop 
-``` bash
-npm start 
+4. Install the dependencies:
+```
+npm install
 ```
 
-4. Open your Juice Shop on your Browser with:
-```bash
+5. Start the application:
+```
+npm start
+```
+
+6. Open Juice Shop in your browser:
+```
 127.0.0.1:3000
 ```
 
