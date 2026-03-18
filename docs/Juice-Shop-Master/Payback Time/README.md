@@ -3,6 +3,7 @@
 This challenge demonstrates an improper input validation vulnerability in the basket and checkout process of OWASP Juice Shop.  
 By intercepting and modifying a basket request in Burp Suite, it is possible to set a negative product quantity and place an order that results in a negative total balance.
 
+> [!WARNING] 
 > **Educational use only:** This documentation was created for learning purposes in a controlled local OWASP Juice Shop environment. No real personal data, production systems, or sensitive credentials were used.
 
 ## Table of Contents
