@@ -15,12 +15,10 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
     - [Prerequisites](#prerequisites)
     - [How-to-Start](#how-to-start)
   - [Usage](#usage)
-  - [Build](#build)
   - [Repository Structure](#repository-structure)
   - [Deployment](#deployment)
     - [Deploy to Github Pages](#deploy-to-github-pages)
     - [Deploying using NGINX](#deploying-using-nginx)
-    - [Contributing](#contributing)
 
 ## Quickstart
 
