@@ -11,8 +11,7 @@ No real personal data, production credentials, or sensitive infrastructure infor
 1. [Prerequisites](#prerequisites)
 2. [What is OWASP Juice Shop](#what-is-owasp-juice-shop)
 3. [Quickstart](#quickstart)
-4. [Usage](#usage)
-5. [Challenges](#challenges)
+4. [Challenges](#challenges)
 
 
 ## Prerequisites
@@ -66,7 +65,7 @@ npm start
 127.0.0.1:3000
 ```
 
-## Challanges
+## Challenges
 
 - [Login Jim](<./Login Jim/README.md>)
 - [Payback Time](<./Payback Time/README.md>)
