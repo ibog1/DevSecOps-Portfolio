@@ -13,6 +13,9 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
   - [Table of Contents](#table-of-contents)
   - [Quickstart](#quickstart)
     - [Prerequisites](#prerequisites)
+    - [How-to-Start](#how-to-start)
+  - [Usage](#usage)
+  - [Build](#build)
   - [Repository Structure](#repository-structure)
   - [Deployment](#deployment)
     - [Deploy to Github Pages](#deploy-to-github-pages)
@@ -27,37 +30,60 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 - [pnpm](https://pnpm.io/) (package manager for faster and more efficient dependency handling)
 - [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
 
-1. Installation
+### How to Start
+
+1. Install dependencies
 
    ```
    $ pnpm install
    ```
 
-2. Local Development
+2. Start development server
 
    ```
    $ pnpm start
    ```
 
-   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+   This starts a local development server. Changes are applied automatically.
 
-3. Build
+3. Build the project
 
    ```
    $ pnpm build
    ```
 
-   This command generates static content into the `build` directory and can be served using any static contents hosting service.
+   The static website is generated in the build directory.
 
 4. Deployment
 
-   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
+   Make sure docusaurus.config.ts is configured correctly for GitHub Pages and follows the official deployment guidelines.
 
    ```
    $ USE_SSH=true pnpm deploy
    ```
 
 For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+
+## Usage
+Detailed configuration and how to modify relevant parts to achieve different results.
+
+### 1- Site configuration (`docusaurus.config.ts`)
+- **Base URLs for Pages**: set `url` to `https://<your-user>.github.io` and `baseUrl` to `/docusaurus-portfolio/` (or your repo name).
+- **Organization/Project**: set `organizationName` and `projectName` to your GitHub user and repo.
+- **Branding**: update `title`, `tagline`, and `favicon`.
+
+### 2- Sections and content
+- **Edit text and layout** inside section components in [`src/components`](src/components). Keep one component per folder with file name `index.tsx`. Use CSS Modules (`*.module.css`).
+- **Add a new section**: create `src/components/<new-section>/index.tsx`, then import and place it in [`src/pages/index.tsx`](src/pages/index.tsx) to control order and layout.
+
+### 3- Styling
+- Use CSS Modules (e.g., `header.module.css`) to keep styles scoped to the component.
+
+### 4- Assets and links
+- Place images in `static/` and reference them with `/img/...`. Respect `baseUrl` when deploying under a subpath.
+- Prefer relative internal links so they work locally and on GitHub Pages.
+
+---
 
 ## Repository Structure
 
