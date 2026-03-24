@@ -1,0 +1,28 @@
+.footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 24px 16px 40px;
+}
+
+.text {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.subtext {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.legal {
+  color: white;
+  text-decoration: none;
+}
+
+.legal:hover {
+  color: white;
+  text-decoration: underline;
+}
+
