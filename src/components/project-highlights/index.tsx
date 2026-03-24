@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import styles from './project-highlights.module.css';
 import Link from '@docusaurus/Link';
 
+import ArrowIcon from '@site/static/img/elements/arrow.svg';
+
+import BabyToolImage from '@site/static/img/project-card/baby-tool.png';
+import TruckSignsImage from '@site/static/img/project-card/truck.signs.png';
+import OwaspJuiceImage from '@site/static/img/project-card/owasp-juice.png';
+import MinecraftImage from '@site/static/img/project-card/minecraft.png';
+import WordPressImage from '@site/static/img/project-card/wordpress.png';
+
+import ShellScriptingIcon from '@site/static/img/project-card/shell-scripting.png';
+import ContainerIcon from '@site/static/img/project-card/container.png';
+import PythonIcon from '@site/static/img/project-card/python.png';
+import ItSecurityIcon from '@site/static/img/project-card/it-security.png';
+import YamlIcon from '@site/static/img/project-card/yaml.png';
 
 type Project = {
   id: string;
@@ -22,74 +35,75 @@ const projects: Project[] = [
     id: 'baby-tools-shop',
     listLabel: 'Baby Tools Shop',
     title: 'Baby Tools Shop',
-    image: '/img/project-card/baby-tool.svg',
+    image: BabyToolImage,
     description:
       'Containerized e-commerce application for baby products. Demonstrates isolated environment benefits for deployment and scalability.',
-    documentationUrl: 'http://localhost:3000/docs/projects/Baby_Tools_Shop',
+    documentationUrl: '/docs/projects/Baby_Tools_Shop',
     githubUrl: 'https://github.com/ibog1/baby-tools-shop',
     skills: [
-      { name: 'Shell scripting', icon: '/img/project-card/shell-scripting.svg' },
-      { name: 'Container', icon: '/img/project-card/container.svg' },
+      { name: 'Shell scripting', icon: ShellScriptingIcon },
+      { name: 'Container', icon: ContainerIcon },
     ],
   },
   {
     id: 'truck-signs-api',
     listLabel: 'Truck Signs API',
     title: 'Truck Signs API',
-    image: '/img/project-card/truck.signs.svg',
+    image: TruckSignsImage,
     description:
       'API-focused project for truck signs data and processing. Shows backend logic, structured endpoints, and technical implementation in Python.',
-    documentationUrl: 'http://localhost:3000/docs/projects/Truck_Signs_Api',
+    documentationUrl: '/docs/projects/Truck_Signs_Api',
     githubUrl: 'https://github.com/ibog1/truck_signs_api',
     skills: [
-      { name: 'Shell scripting', icon: '/img/project-card/shell-scripting.svg' },
-      { name: 'Python', icon: '/img/project-card/python.svg' },
-      { name: 'Container', icon: '/img/project-card/container.svg' },
+      { name: 'Shell scripting', icon: ShellScriptingIcon },
+      { name: 'Python', icon: PythonIcon },
+      { name: 'Container', icon: ContainerIcon },
     ],
   },
   {
     id: 'owasp-juice-shop',
     listLabel: 'OWASP Juice Shop',
     title: 'OWASP Juice Shop',
-    image: '/img/project-card/owasp-juice.svg',
+    image: OwaspJuiceImage,
     description:
       'Practical security project based on OWASP Juice Shop. Focuses on vulnerability analysis, attack paths, and hands-on cybersecurity learning.',
-    documentationUrl: 'http://localhost:3000/docs/projects/Juice-Shop-Master/',
-    githubUrl: 'https://github.com/ibog1/DevSecOps-Portfolio/tree/docs/juice-shop-master/docs/Juice-Shop-Master',
+    documentationUrl: '/docs/projects/Juice-Shop-Master/',
+    githubUrl:
+      'https://github.com/ibog1/DevSecOps-Portfolio/tree/docs/juice-shop-master/docs/Juice-Shop-Master',
     skills: [
-      { name: 'IT Security', icon: '/img/project-card/it-security.svg' },
-      { name: 'Python', icon: '/img/project-card/python.svg' },
+      { name: 'IT Security', icon: ItSecurityIcon },
+      { name: 'Python', icon: PythonIcon },
     ],
   },
   {
     id: 'minecraft-server',
     listLabel: 'Minecraft Server',
     title: 'Minecraft Server',
-    image: '/img/project-card/minecraft.svg',
+    image: MinecraftImage,
     description:
       'Deployment and configuration project for a Minecraft server. Includes automation, infrastructure setup, and secure server-related workflows.',
-    documentationUrl: 'http://localhost:3000/docs/projects/Minecraft_Server',
+    documentationUrl: '/docs/projects/Minecraft_Server',
     githubUrl: 'https://github.com/ibog1/minecraft-server',
     skills: [
-      { name: 'YAML', icon: '/img/project-card/yaml.svg' },
-      { name: 'Shell scripting', icon: '/img/project-card/shell-scripting.svg' },
-      { name: 'IT Security', icon: '/img/project-card/it-security.svg' },
-      { name: 'Container', icon: '/img/project-card/container.svg' },
+      { name: 'YAML', icon: YamlIcon },
+      { name: 'Shell scripting', icon: ShellScriptingIcon },
+      { name: 'IT Security', icon: ItSecurityIcon },
+      { name: 'Container', icon: ContainerIcon },
     ],
   },
   {
     id: 'wordpress-multi-container-setup',
     listLabel: 'WordPress Multi\nContainer Setup',
     title: 'WordPress Multi Container Setup',
-    image: '/img/project-card/wordpress.svg',
+    image: WordPressImage,
     description:
       'WordPress deployment with a multi-container architecture. Highlights orchestration, separation of services, and secure hosting structure.',
-    documentationUrl: 'http://localhost:3000/docs/projects/WordPress_Docker_Lab',
+    documentationUrl: '/docs/projects/WordPress_Docker_Lab',
     githubUrl: 'https://github.com/ibog1/-wordpress-docker-lab',
     skills: [
-      { name: 'Shell scripting', icon: '/img/project-card/shell-scripting.svg' },
-      { name: 'Container', icon: '/img/project-card/container.svg' },
-      { name: 'IT Security', icon: '/img/project-card/it-security.svg' },
+      { name: 'Shell scripting', icon: ShellScriptingIcon },
+      { name: 'Container', icon: ContainerIcon },
+      { name: 'IT Security', icon: ItSecurityIcon },
     ],
   },
 ];
@@ -128,16 +142,12 @@ export default function ProjectHighlights(): React.JSX.Element {
             ))}
 
             <Link to="/docs/projects/overview" className={styles.moreLink}>
-              <img
-                src="/img/elements/arrow.svg"
-                alt=""
+              <ArrowIcon
                 aria-hidden="true"
                 className={styles.moreArrow}
               />
               <span> see more projects</span>
             </Link>
-
-
           </div>
 
           <article className={styles.card}>
@@ -168,15 +178,18 @@ export default function ProjectHighlights(): React.JSX.Element {
                 <p className={styles.description}>{activeProject.description}</p>
 
                 <div className={styles.actions}>
-                  <a
-                    href={activeProject.documentationUrl}
+                  <Link
+                    to={activeProject.documentationUrl}
                     className={styles.primaryButton}
                   >
                     Documentation
-                  </a>
+                  </Link>
+
                   <a
                     href={activeProject.githubUrl}
                     className={styles.secondaryButton}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     GitHub
                   </a>

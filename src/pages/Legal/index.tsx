@@ -31,13 +31,11 @@ export default function LegalPage() {
                         </p>
 
                         <div className={styles.infoBlock}>
-                            <p><strong>Address:</strong> beispielstrasse 10, 0000 berlin, Germany</p>
+                            <p><strong>Address:</strong> Brunnenstraße 21, 56587 Straßenhaus, Germany</p>
                             
                             <p>
-                                <strong>Email:</strong>{" "}
-                                <a href="ibrahim.g94@icloud.com" className={styles.link}>
-                                    ibrahim.g94@icloud.com
-                                </a>
+                                <strong>Email: </strong>{"ibrahim.g94@icloud.com"}
+                                
                             </p>
                             <p><strong>Managing Director:</strong> Ibrahim Güllü</p>
                         </div>
@@ -74,13 +72,8 @@ export default function LegalPage() {
                         <div className={styles.policySection}>
                             <h3>2. Responsible Party</h3>
                             <p>Responsible for data processing on this website:</p>
-                            <p>Name einfügen</p>
-                            <p>
-                                Email:{" "}
-                                <a href="mailto:aaaa" className={styles.link}>
-                                    emaileinfügen.com
-                                </a>
-                            </p>
+                            <p>Ibrahim Güllü</p>
+                            <p>Email: ibrahim.g94@icloud.com</p>
                         </div>
 
                         <div className={styles.policySection}>

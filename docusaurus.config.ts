@@ -9,22 +9,22 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
+  title: 'My Developer Blog',
+  tagline: 'Developer portfolio',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://spmse.github.io",
+  url: process.env.DEPLOYMENT_URL ?? "https://ibog1.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl: process.env.BASE_URL ?? "/DevSecOps-Portfolio/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG, // Usually your GitHub org/user name.
-  projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
+  organizationName: process.env.GITHUB_ORG ?? "ibog1",
+  projectName: process.env.GITHUB_PROJECT ?? "DevSecOps-Portfolio",
 
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
+  deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? "gh-pages",
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            "https://github.com/ibog1/DevSecOps-Portfolio",
         },
         blog: blogEnabled ?
           {
@@ -58,7 +58,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              "https://github.com/ibog1/DevSecOps-Portfolio",
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -76,9 +76,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'My Developer Blog',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'My Developer Blog Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -89,10 +89,11 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          href: 'https://github.com/ibog1/DevSecOps-Portfolio',
           label: 'Github',
           position: 'right',
-        },
+        }
+
       ],
     },
     footer: {
@@ -130,8 +131,9 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/ibog1/DevSecOps-Portfolio',
             }
+
           ],
         },
       ],

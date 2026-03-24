@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './hero.module.css';
+import ibrahimImage from '@site/static/img/me/ibrahim.jpeg';
 
 export default function Hero(): React.JSX.Element {
   return (
@@ -14,13 +15,11 @@ export default function Hero(): React.JSX.Element {
             <h2 className={styles.role}>DevSecOps Engineer</h2>
 
             <p className={styles.description}>
-              Programming is my passion, combining creativity with logical
-              thinking to solve complex problems efficiently. The fast evolution
-              of technology motivates me to continuously improve my skills. I
-              enjoy debugging for its analytical challenges and the thrill when
-              a program finally works. I stay updated on tech trends relevant to
-              my projects and am proud of my work on the OWASP Juice Shop, which
-              strengthened my IT security knowledge.
+              I am a trained software developer and had the opportunity to work on various hands-on projects during my DevSecOps training.<br/>
+              Through these projects, I was able to further strengthen my skills in software development and IT security.<br/>
+              Working with OWASP Juice Shop in particular helped me deepen my understanding of common vulnerabilities in web applications.<br/>
+              I care about building software that is not only functional, but also clean, maintainable, and secure.
+
             </p>
 
             <a href="#contact" className={styles.button}>
@@ -29,13 +28,12 @@ export default function Hero(): React.JSX.Element {
           </div>
 
           <div className={styles.imageCard}>
-  <img
-    src="/img/me/ibrahim.jpeg"
-    alt="Ibrahim Güllü"
-    className={styles.image}
-  />
-</div>
-
+            <img
+              src={ibrahimImage}
+              alt="Ibrahim Güllü"
+              className={styles.image}
+            />
+          </div>
         </div>
       </div>
     </section>

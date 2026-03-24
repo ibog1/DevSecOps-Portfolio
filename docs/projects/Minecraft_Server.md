@@ -51,7 +51,7 @@ The server is exposed on **port 8888**.
 
 ### Dockerfile
 
-The [`Dockerfile`](./Dockerfile) builds a custom Minecraft server image without using a prebuilt image.
+The [`Dockerfile`](https://github.com/ibog1/minecraft-server/blob/feature/minecraft-server/Dockerfile) builds a custom Minecraft server image without using a prebuilt image.
 
 > [!IMPORTANT]  
 > A non-root user is used to improve container security.
@@ -63,7 +63,7 @@ The [`Dockerfile`](./Dockerfile) builds a custom Minecraft server image without 
 
 ---
 
-## [`docker-compose.yaml`](./docker-compose.yaml)
+## [`docker-compose.yaml`](https://github.com/ibog1/minecraft-server/blob/feature/minecraft-server/docker-compose.yaml)
 
 > [!IMPORTANT]
 > Port 8888 is exposed externally as required by the project.
@@ -77,7 +77,7 @@ The [`Dockerfile`](./Dockerfile) builds a custom Minecraft server image without 
 
 ---
 
-## [`entrypoint.sh`](./entrypoint.sh)
+## [`entrypoint.sh`](https://github.com/ibog1/minecraft-server/blob/feature/minecraft-server/entrypoint.sh)
 
 > [!IMPORTANT]
 > The working directory is set to /data so configuration files are created in the persistent volume

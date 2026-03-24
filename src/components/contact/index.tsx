@@ -1,6 +1,13 @@
 import React from 'react';
 import styles from './contact.module.css';
 
+import DefaultMailIcon from '@site/static/img/elements/default_mail.svg';
+import HoverMailIcon from '@site/static/img/elements/hover_mail.svg';
+import DefaultLinkedinIcon from '@site/static/img/elements/default_linkdin.svg';
+import HoverLinkedinIcon from '@site/static/img/elements/hover_linkdin.svg';
+import ButtonArrowDefaultIcon from '@site/static/img/elements/button_arrow_default.svg';
+import ButtonArrowHoverIcon from '@site/static/img/elements/button_arrow_hover.svg';
+
 export default function Contact(): React.JSX.Element {
   return (
     <section id="contact" className={styles.contact}>
@@ -9,11 +16,12 @@ export default function Contact(): React.JSX.Element {
           <div className={styles.left}>
             <h2 className={styles.title}>Contact me</h2>
             <ul className={styles.list}>
-              <li>Feel free to reach out with job offers or opportunities.</li>
-              <li>What role are you looking for?</li>
-              <li>How will you contribute to the new team?</li>
-              <li>Are you open for remote work or even relocate?</li>
+              <li>Feel free to contact me regarding job offers or professional opportunities.</li>
+              <li>I am looking for a position in software development, backend development, or DevSecOps.</li>
+              <li>I bring practical experience in application development, Docker, Python, Django, and security-focused project work.</li>
+              <li>I am open to remote work and willing to relocate for the right opportunity.</li>
             </ul>
+
           </div>
 
           <div className={styles.right}>
@@ -22,24 +30,20 @@ export default function Contact(): React.JSX.Element {
             <div className={styles.contactItems}>
               <a
                 className={styles.contactItem}
-                href="mailto:yourmail@example.com"
+                href="mailto:ibrahim.g94@icloud.com"
                 aria-label="Send email"
               >
                 <span className={styles.iconWrap}>
-                  <img
-                    src="/img/elements/default_mail.svg"
-                    alt=""
+                  <DefaultMailIcon
                     aria-hidden="true"
                     className={`${styles.icon} ${styles.iconDefault}`}
                   />
-                  <img
-                    src="/img/elements/hover_mail.svg"
-                    alt=""
+                  <HoverMailIcon
                     aria-hidden="true"
                     className={`${styles.icon} ${styles.iconHover}`}
                   />
                 </span>
-                <span className={styles.contactText}>yourmail@example.com</span>
+                <span className={styles.contactText}>ibrahim.g94@icloud.com</span>
               </a>
 
               <a
@@ -50,15 +54,11 @@ export default function Contact(): React.JSX.Element {
                 aria-label="Open LinkedIn profile"
               >
                 <span className={styles.iconWrap}>
-                  <img
-                    src="/img/elements/default_linkdin.svg"
-                    alt=""
+                  <DefaultLinkedinIcon
                     aria-hidden="true"
                     className={`${styles.icon} ${styles.iconDefault}`}
                   />
-                  <img
-                    src="/img/elements/hover_linkdin.svg"
-                    alt=""
+                  <HoverLinkedinIcon
                     aria-hidden="true"
                     className={`${styles.icon} ${styles.iconHover}`}
                   />
@@ -72,23 +72,17 @@ export default function Contact(): React.JSX.Element {
         <div className={styles.center}>
           <a className={styles.arrowLink} href="#about" aria-label="Back to about section">
             <span className={styles.arrowIconWrap}>
-              <img
-                src="/img/elements/button_arrow_default.svg"
-                alt=""
+              <ButtonArrowDefaultIcon
                 aria-hidden="true"
                 className={`${styles.arrowIcon} ${styles.arrowIconDefault}`}
               />
-              <img
-                src="/img/elements/button_arrow_hover.svg"
-                alt=""
+              <ButtonArrowHoverIcon
                 aria-hidden="true"
                 className={`${styles.arrowIcon} ${styles.arrowIconHover}`}
               />
             </span>
           </a>
         </div>
-
-        
       </div>
     </section>
   );

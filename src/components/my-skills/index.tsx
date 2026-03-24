@@ -1,16 +1,29 @@
 import React from 'react';
 import styles from './my-skills.module.css';
 
+import HtmlIcon from '@site/static/img/skill-card/html-icon.png';
+import CssIcon from '@site/static/img/skill-card/css-icon.png';
+import DocusaurusIcon from '@site/static/img/skill-card/docusaurus-icon.png';
+import PythonIcon from '@site/static/img/skill-card/python-icon.png';
+import ShellIcon from '@site/static/img/skill-card/shell-icon.png';
+import YamlIcon from '@site/static/img/skill-card/yaml-icon.png';
+import DockerIcon from '@site/static/img/skill-card/docker-icon.png';
+import CicdIcon from '@site/static/img/skill-card/cicd-icon.png';
+import ItSecurityIcon from '@site/static/img/skill-card/it-security-icon.png';
+
+type SvgComponent = React.ComponentType<React.ComponentProps<'svg'> & { title?: string }>;
+
 type Skill = {
   title: string;
-  icon: string;
+  icon?: SvgComponent;
+  iconSrc?: string;
   details: string[];
 };
 
 const skills: Skill[] = [
   {
     title: 'HTML',
-    icon: '/img/skill-card/html-icon.svg',
+    iconSrc: HtmlIcon,
     details: [
       'User-friendly navigation menus',
       'Responsive web design',
@@ -20,7 +33,7 @@ const skills: Skill[] = [
   },
   {
     title: 'CSS',
-    icon: '/img/skill-card/css-icon.svg',
+    iconSrc: CssIcon,
     details: [
       'User-friendly navigation menus',
       'Responsive web design',
@@ -30,7 +43,7 @@ const skills: Skill[] = [
   },
   {
     title: 'Docusaurus',
-    icon: '/img/skill-card/docusaurus-icon.svg',
+    iconSrc: DocusaurusIcon,
     details: [
       'Search functionality',
       'Static website and customization',
@@ -40,7 +53,7 @@ const skills: Skill[] = [
   },
   {
     title: 'Python',
-    icon: '/img/skill-card/python-icon.svg',
+    iconSrc: PythonIcon,
     details: [
       'Build APIs',
       'Spam filtering, recommendation systems',
@@ -50,7 +63,7 @@ const skills: Skill[] = [
   },
   {
     title: 'Shell scripting',
-    icon: '/img/skill-card/shell-icon.svg',
+    iconSrc: ShellIcon,
     details: [
       'Adding new users and setting their permissions',
       'Performing calculations or running statistical analysis on data',
@@ -59,7 +72,7 @@ const skills: Skill[] = [
   },
   {
     title: 'YAML',
-    icon: '/img/skill-card/yaml-icon.svg',
+    iconSrc: YamlIcon,
     details: [
       'A Kubernetes deployment',
       'Store settings like database connections',
@@ -69,7 +82,7 @@ const skills: Skill[] = [
   },
   {
     title: 'Container',
-    icon: '/img/skill-card/docker-icon.svg',
+    iconSrc: DockerIcon,
     details: [
       'CI/CD pipelines',
       'Automate building, testing, deploying applications',
@@ -78,7 +91,7 @@ const skills: Skill[] = [
   },
   {
     title: 'CI/CD',
-    icon: '/img/skill-card/cicd-icon.svg',
+    iconSrc: CicdIcon,
     details: [
       'Automated builds and tests',
       'Pre-built actions for common tasks',
@@ -88,7 +101,7 @@ const skills: Skill[] = [
   },
   {
     title: 'IT Security',
-    icon: '/img/skill-card/it-security-icon.svg',
+    iconSrc: ItSecurityIcon,
     details: [
       'Simulate attacks and identify vulnerabilities',
       'Setting up multi-factor authentication',
@@ -105,27 +118,40 @@ export default function MySkills(): React.JSX.Element {
         <h2 className={styles.title}>My skills</h2>
 
         <div className={styles.grid}>
-          {skills.map((skill) => (
-            <article key={skill.title} className={styles.card}>
-              <div className={styles.cardFront}>
-                <img
-                  src={skill.icon}
-                  alt={`${skill.title} icon`}
-                  className={styles.icon}
-                />
-                <span className={styles.label}>{skill.title}</span>
-              </div>
+          {skills.map((skill) => {
+            const SkillIcon = skill.icon;
 
-              <div className={styles.cardHover}>
-                <h3 className={styles.hoverTitle}>How I used this skill</h3>
-                <ul className={styles.details}>
-                  {skill.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
+            return (
+              <article key={skill.title} className={styles.card}>
+                <div className={styles.cardFront}>
+                  {SkillIcon ? (
+                    <SkillIcon
+                      title={`${skill.title} icon`}
+                      className={styles.icon}
+                      role="img"
+                    />
+                  ) : (
+                    <img
+                      src={skill.iconSrc}
+                      alt={`${skill.title} icon`}
+                      className={styles.icon}
+                    />
+                  )}
+
+                  <span className={styles.label}>{skill.title}</span>
+                </div>
+
+                <div className={styles.cardHover}>
+                  <h3 className={styles.hoverTitle}>How I used this skill</h3>
+                  <ul className={styles.details}>
+                    {skill.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
