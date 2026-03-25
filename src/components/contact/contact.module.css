@@ -1,0 +1,205 @@
+.contact {
+  background-color: #1f2937;
+  color: white;
+  padding: 56px 0 38px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 54px;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+  max-width: 420px;
+  margin-left: 70px;
+}
+
+.title {
+  margin: 0 0 52px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 66px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #f4f1e8;
+  letter-spacing: -0.02em;
+}
+
+.list {
+  margin: 0;
+  padding-left: 20px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.subtitle {
+  margin: 12px 0 28px;
+  font-size: 20px;
+  color: white;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.contactItem:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 4px;
+}
+
+.iconWrap {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.icon {
+  position: absolute;
+  inset: 0;
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.2s ease;
+}
+
+.iconDefault {
+  opacity: 1;
+}
+
+.iconHover {
+  opacity: 0;
+}
+
+.contactItem:hover .iconDefault {
+  opacity: 0;
+}
+
+.contactItem:hover .iconHover {
+  opacity: 1;
+}
+
+.contactText {
+  font-size: 20px;
+  line-height: 1.3;
+  color: #93c5fd;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 56px 0 24px;
+}
+
+.arrowLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.arrowIconWrap {
+  position: relative;
+  width: 44px;
+  height: 64px;
+  display: inline-block;
+}
+
+.arrowIcon {
+  position: absolute;
+  inset: 0;
+  width: 44px;
+  height: 64px;
+  transition: opacity 0.2s ease;
+}
+
+.arrowIconDefault {
+  opacity: 1;
+}
+
+.arrowIconHover {
+  opacity: 0;
+}
+
+.arrowLink:hover .arrowIconDefault {
+  opacity: 0;
+}
+
+.arrowLink:hover .arrowIconHover {
+  opacity: 1;
+}
+
+
+.bottom {
+  text-align: center;
+}
+
+.copy {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.legal {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 20px 32px;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .right {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+
+  .contactText {
+    font-size: 18px;
+  }
+
+  .center {
+    margin: 40px 0 24px;
+  }
+}

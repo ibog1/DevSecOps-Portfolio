@@ -1,0 +1,116 @@
+.legalPage {
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  background: var(--ifm-background-color);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1rem;
+}
+
+.card {
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.infoBlock {
+  margin: 1rem 0 1.5rem;
+}
+
+.infoBlock p {
+  margin: 0.35rem 0;
+}
+
+.policySection + .policySection {
+  margin-top: 1.75rem;
+}
+
+.policySection h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.1rem;
+}
+
+.policySection p {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
+.list {
+  margin: 0.75rem 0 1rem 1.25rem;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.link {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: black;
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  color: blue;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .legalPage {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

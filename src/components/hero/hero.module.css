@@ -1,0 +1,98 @@
+.hero {
+  background: #2f6fdd;
+  padding: 28px 0 70px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+
+.textBlock {
+  width: 620px;
+  padding-top: 72px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.name {
+  margin: 0 0 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.role {
+  margin: 0 0 28px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.description {
+  margin: 0 0 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 26px;
+  border-radius: 999px;
+  background: #f4f1e8;
+  color: #2f6fdd;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.button:hover,
+.button:focus,
+.button:visited,
+.button:active {
+  color: #2f6fdd;
+  text-decoration: none;
+}
+
+.imageCard {
+  width: 392px;
+  height: 392px;
+  margin-top: 76px;
+  border-radius: 30px;
+  background: rgba(38, 83, 168, 0.9);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
