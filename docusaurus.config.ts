@@ -13,18 +13,19 @@ const config: Config = {
   tagline: 'Developer portfolio',
   favicon: 'img/favicon.ico',
 
+  
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://ibog1.github.io",
+  url: 'https://ibog1.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/DevSecOps-Portfolio/",
+  baseUrl: '/DevSecOps-Portfolio/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG ?? "ibog1",
-  projectName: process.env.GITHUB_PROJECT ?? "DevSecOps-Portfolio",
+  organizationName: 'ibog1',
+  projectName: 'DevSecOps-Portfolio',
 
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? "gh-pages",
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
