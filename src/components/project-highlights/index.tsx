@@ -93,8 +93,8 @@ const projects: Project[] = [
   },
   {
     id: 'wordpress-multi-container-setup',
-    listLabel: 'WordPress Multi\nContainer Setup',
-    title: 'WordPress Multi Container Setup',
+    listLabel: 'WordPress Docker Setup',
+    title: 'WordPress Docker Setup',
     image: WordPressImage,
     description:
       'WordPress deployment with a multi-container architecture. Highlights orchestration, separation of services, and secure hosting structure.',
@@ -114,10 +114,13 @@ export default function ProjectHighlights(): React.JSX.Element {
   const activeProject =
     projects.find((project) => project.id === activeProjectId) ?? projects[0];
 
+  const mobileProjects = projects.slice(0, 3);
+
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.container}>
         <h2 className={styles.title}>My project highlights</h2>
+
 
         <div className={styles.content}>
           <div className={styles.list}>
@@ -125,8 +128,7 @@ export default function ProjectHighlights(): React.JSX.Element {
               <button
                 key={project.id}
                 type="button"
-                className={`${styles.listButton} ${activeProject.id === project.id ? styles.listButtonActive : ''
-                  }`}
+                className={`${styles.listButton} ${activeProject.id === project.id ? styles.listButtonActive : ''}`}
                 onClick={() => setActiveProjectId(project.id)}
               >
                 <span className={styles.listNumber}>{index + 1}.</span>
@@ -142,17 +144,18 @@ export default function ProjectHighlights(): React.JSX.Element {
             ))}
 
             <Link to="/docs/projects/overview" className={styles.moreLink}>
-              <ArrowIcon
-                aria-hidden="true"
-                className={styles.moreArrow}
-              />
+              <ArrowIcon aria-hidden="true" className={styles.moreArrow} />
               <span> see more projects</span>
             </Link>
           </div>
 
           <article className={styles.card}>
             <div className={styles.cardHeader}>
-              <h3 className={styles.cardTitle}>{activeProject.title}</h3>
+              <h3
+                className={`${styles.cardTitle} ${activeProject.id === 'wordpress-multi-container-setup' ? styles.cardTitleWrap : ''}`}
+              >
+                {activeProject.title}
+              </h3>
 
               <div className={styles.skills}>
                 {activeProject.skills.map((skill) => (
@@ -197,6 +200,72 @@ export default function ProjectHighlights(): React.JSX.Element {
               </div>
             </div>
           </article>
+        </div>
+
+        <div className={styles.mobileCards}>
+          {mobileProjects.map((project) => (
+            <article key={project.id} className={styles.mobileCard}>
+              <div className={styles.cardHeader}>
+                <h3
+                  className={`${styles.cardTitle} ${project.id === 'wordpress-multi-container-setup' ? styles.cardTitleWrap : ''}`}
+                >
+                  {project.title}
+                </h3>
+
+                <div className={styles.skills}>
+                  {project.skills.map((skill) => (
+                    <div key={skill.name} className={styles.skillBadge}>
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className={styles.skillIcon}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.cardContent}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={styles.projectImage}
+                />
+
+                <div className={styles.cardText}>
+                  <p className={styles.description}>{project.description}</p>
+
+                  <div className={styles.actions}>
+                    <Link
+                      to={project.documentationUrl}
+                      className={styles.primaryButton}
+                    >
+                      Documentation
+                    </Link>
+
+                    <a
+                      href={project.githubUrl}
+                      className={styles.secondaryButton}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+
+          <p className={styles.mobileMoreText}>
+            I have also worked on additional projects focused on deployment, automation, containerized environments, and secure infrastructure setups. You can find more of them in the full project overview.
+          </p>
+
+
+          <Link to="/docs/projects/overview" className={styles.mobileMoreLink}>
+            <ArrowIcon aria-hidden="true" className={styles.moreArrow} />
+            <span> see more projects</span>
+          </Link>
         </div>
       </div>
     </section>

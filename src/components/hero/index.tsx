@@ -14,12 +14,19 @@ export default function Hero(): React.JSX.Element {
 
             <h2 className={styles.role}>DevSecOps Engineer</h2>
 
-            <p className={styles.description}>
-              I am a trained software developer and had the opportunity to work on various hands-on projects during my DevSecOps training.<br/>
-              Through these projects, I was able to further strengthen my skills in software development and IT security.<br/>
-              Working with OWASP Juice Shop in particular helped me deepen my understanding of common vulnerabilities in web applications.<br/>
-              I care about building software that is not only functional, but also clean, maintainable, and secure.
+            <div className={styles.mobileImageCard}>
+              <img
+                src={ibrahimImage}
+                alt="Ibrahim Güllü"
+                className={styles.image}
+              />
+            </div>
 
+            <p className={styles.description}>
+              I am a trained software developer and had the opportunity to work on various hands-on projects during my DevSecOps training.
+              Through these projects, I was able to further strengthen my skills in software development and IT security.
+              Working with OWASP Juice Shop in particular helped me deepen my understanding of common vulnerabilities in web applications.
+              I care about building software that is not only functional, but also clean, maintainable, and secure.
             </p>
 
             <a href="#contact" className={styles.button}>

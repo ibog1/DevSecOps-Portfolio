@@ -100,14 +100,18 @@
   margin-top: 8px;
 }
 
+.mobileWrapper {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .skills {
-    padding: 32px 20px 48px;
+    padding: 32px 0 48px;
   }
 
   .container {
     max-width: 100%;
+    padding: 0 20px;
   }
 
   .title {
@@ -116,12 +120,100 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: none;
   }
 
-  .card,
-  .cardFront {
-    min-height: 220px;
+  .mobileWrapper {
+    display: block;
+  }
+
+  .mobileViewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .mobileTrack {
+    display: flex;
+    width: 300%;
+    transition: transform 0.3s ease;
+  }
+
+  .mobileSlide {
+    width: 100%;
+    flex: 0 0 100%;
+    background: #283a52;
+    border-radius: 28px;
+    padding: 22px 16px 18px;
+  }
+
+  .mobileSkillRow {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .mobileSkillRow + .mobileSkillRow {
+    margin-top: 22px;
+  }
+
+  .mobileSkillLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  .mobileIcon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .mobileLabel {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.05;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .mobileDetails {
+    margin: 0;
+    padding-left: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #ffffff;
+  }
+
+  .mobileDetails li + li {
+    margin-top: 3px;
+  }
+
+  .mobileDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .dotActive {
+    width: 22px;
+    background: #ffffff;
   }
 }

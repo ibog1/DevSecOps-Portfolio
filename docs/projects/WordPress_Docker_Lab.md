@@ -1,4 +1,4 @@
-# WordPress Docker Lab
+# WordPress Docker Setup
 This repository contains a minimal WordPress setup running in Docker using docker-compose.
 
 

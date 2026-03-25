@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './my-skills.module.css';
 
 import HtmlIcon from '@site/static/img/skill-card/html-icon.png';
@@ -111,11 +111,47 @@ const skills: Skill[] = [
   },
 ];
 
+const skillSlides = [
+  skills.slice(0, 3),
+  skills.slice(3, 6),
+  skills.slice(6, 9),
+];
+
 export default function MySkills(): React.JSX.Element {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+
+    const distance = touchStartX - touchEndX;
+
+    if (distance > minSwipeDistance && activeSlide < skillSlides.length - 1) {
+      setActiveSlide((prev) => prev + 1);
+    }
+
+    if (distance < -minSwipeDistance && activeSlide > 0) {
+      setActiveSlide((prev) => prev - 1);
+    }
+  };
+
   return (
     <section id="skills" className={styles.skills}>
       <div className={styles.container}>
         <h2 className={styles.title}>My skills</h2>
+
 
         <div className={styles.grid}>
           {skills.map((skill) => {
@@ -152,6 +188,68 @@ export default function MySkills(): React.JSX.Element {
               </article>
             );
           })}
+        </div>
+
+        <div className={styles.mobileWrapper}>
+          <div
+            className={styles.mobileViewport}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className={styles.mobileTrack}
+              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+            >
+              {skillSlides.map((slide, slideIndex) => (
+                <article key={slideIndex} className={styles.mobileSlide}>
+                  {slide.map((skill) => {
+                    const SkillIcon = skill.icon;
+
+                    return (
+                      <div key={skill.title} className={styles.mobileSkillRow}>
+                        <div className={styles.mobileSkillLeft}>
+                          {SkillIcon ? (
+                            <SkillIcon
+                              title={`${skill.title} icon`}
+                              className={styles.mobileIcon}
+                              role="img"
+                            />
+                          ) : (
+                            <img
+                              src={skill.iconSrc}
+                              alt={`${skill.title} icon`}
+                              className={styles.mobileIcon}
+                            />
+                          )}
+
+                          <span className={styles.mobileLabel}>{skill.title}</span>
+                        </div>
+
+                        <ul className={styles.mobileDetails}>
+                          {skill.details.map((detail) => (
+                            <li key={detail}>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.mobileDots}>
+            {skillSlides.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`${styles.dot} ${activeSlide === index ? styles.dotActive : ''}`}
+                onClick={() => setActiveSlide(index)}
+                aria-label={`Show skill card ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

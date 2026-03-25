@@ -169,23 +169,26 @@ This section will cover some hot tips when trying to interacting with this repos
 
 ### Photos
 
-##### Home Page with login
+#### Home Page with login
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080815407.jpg"></img>
-##### Home Page with filter
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080840305.jpg"></img>
-##### Product Detail Page
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080934541.jpg"></img>
+![Home Page with login](/img/babytoolshop/hompagewithlogin.jpg)
 
-##### Home Page with no login
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080953570.jpg"></img>
+#### Home Page with filter
 
+![Home Page with filter](/img/babytoolshop/hompagewithfilter.jpg)
 
-##### Register Page
+#### Product Detail Page
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081016022.jpg"></img>
+![Product Detail Page](/img/babytoolshop/productdetailpage.jpg)
 
+#### Home Page with no login
 
-##### Login Page
+![Home Page with no login](/img/babytoolshop/hompagewithnologin.jpg)
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081044867.jpg"></img>
+#### Register Page
+
+![Register Page](/img/babytoolshop/registerpage.jpg)
+
+#### Login Page
+
+![Login Page](/img/babytoolshop/loginpage.jpg)

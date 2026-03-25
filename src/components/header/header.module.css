@@ -1,11 +1,16 @@
 .header {
   background-color: #2f6fdd;
   padding: 24px 0 0;
+  position: relative;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav {
@@ -30,4 +35,96 @@
 .nav a:hover {
   text-decoration: underline;
   transform: scale(1.04);
+}
+
+.menuButton {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.menuButton span {
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background: #f4f1e8;
+  border-radius: 999px;
+  margin-left: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(38, 98, 212, 0.96);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 20px;
+}
+
+.overlayContent {
+  width: 100%;
+  max-width: 430px;
+  background: #f8f6ef;
+  padding: 28px 24px 36px;
+  position: relative;
+}
+
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: none;
+  background: transparent;
+  color: #266AD9;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.overlayNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.overlayNav a {
+  color: #266AD9;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 0 0;
+  }
+
+  .container {
+    padding: 0 20px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+    margin-left: auto;
+  }
 }

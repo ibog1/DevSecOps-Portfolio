@@ -24,6 +24,7 @@
   flex: 1;
   max-width: 420px;
   margin-left: 70px;
+  padding-top: 18px;
 }
 
 .title {
@@ -43,8 +44,9 @@
   line-height: 1.7;
 }
 
+
 .subtitle {
-  margin: 12px 0 28px;
+  margin: 0 0 52px;
   font-size: 20px;
   color: white;
 }
@@ -52,7 +54,7 @@
 .contactItems {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .contactItem {

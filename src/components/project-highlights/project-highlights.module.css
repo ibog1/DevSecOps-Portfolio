@@ -52,7 +52,6 @@
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-
 .listButton:hover {
   transform: scale(1.04);
   opacity: 1;
@@ -83,13 +82,14 @@
 }
 
 .card {
-  width: 100%;
-  max-width: 1000px;
-  min-height: 440px;
-  background: #2F4563;
+  width: 880px;
+  height: 460px;
+  background: #2f4563;
   border-radius: 22px;
   padding: 28px 34px 32px;
   color: #ffffff;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .cardHeader {
@@ -98,29 +98,39 @@
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 18px;
-  min-height: 96px;
+  height: 110px;
 }
 
 .cardTitle {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 1.05;
   color: #f8f6ef;
   letter-spacing: -0.02em;
   flex: 1;
   min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardTitleWrap {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 .skills {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 10px;
-  width: 470px;
-  min-width: 470px;
+  gap: 8px;
+  width: 440px;
+  min-width: 440px;
   flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 .skillBadge {
@@ -131,9 +141,9 @@
 }
 
 .skillIcon {
-  height: 42px;
+  height: 38px;
   width: auto;
-  max-width: 110px;
+  max-width: 100px;
   object-fit: contain;
   display: block;
 }
@@ -142,11 +152,11 @@
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  min-height: 290px;
+  height: 290px;
 }
 
 .projectImage {
-  width: 465px;
+  width: 400px;
   height: 245px;
   border-radius: 26px;
   object-fit: cover;
@@ -156,15 +166,16 @@
 
 .cardText {
   display: flex;
-  flex: 1;
-  min-height: 245px;
   flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  min-height: 245px;
   padding-top: 10px;
 }
 
 .description {
   margin: 0;
-  max-width: 390px;
+  max-width: 380px;
   min-height: 112px;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
@@ -198,8 +209,7 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   box-sizing: border-box;
   flex: 0 0 auto;
 }
@@ -242,3 +252,160 @@
   text-decoration: none;
 }
 
+.mobileCards {
+  display: none;
+}
+
+.mobileMoreLink {
+  display: none;
+}
+
+.mobileMoreText {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 0 28px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    margin: 0 0 32px;
+    font-size: 40px;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .mobileCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobileCard {
+    width: 100%;
+    background: #2f4563;
+    border-radius: 20px;
+    padding: 24px 20px;
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+
+  .cardHeader {
+    height: auto;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cardTitle {
+    font-size: 30px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .cardTitleWrap {
+    white-space: normal;
+  }
+
+  .skills {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skillIcon {
+    height: 34px;
+    max-width: 90px;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .projectImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .cardText {
+    max-width: 100%;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .description {
+    max-width: 100%;
+    min-height: 0;
+    font-size: 18px;
+  }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 22px;
+  flex-wrap: nowrap;
+}
+
+
+.primaryButton,
+.secondaryButton {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  height: 52px;
+  font-size: 17px;
+  padding: 0 16px;
+}
+
+.primaryButton {
+  flex: 1.35;
+}
+
+.secondaryButton {
+  flex: 0.85;
+}
+
+.mobileMoreText {
+  display: block;
+  margin: 4px 0 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #f4f1e8;
+  text-align: left;
+}
+
+
+.mobileMoreLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #f4f1e8 !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+}
