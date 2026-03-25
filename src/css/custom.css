@@ -4,6 +4,18 @@
  * work well for content-centric websites.
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;

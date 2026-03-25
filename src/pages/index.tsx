@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '@theme/Layout';
 import Header from '@site/src/components/header';
 import Hero from '@site/src/components/hero';
 import MySkills from '@site/src/components/my-skills';
@@ -8,16 +9,15 @@ import Footer from '@site/src/components/footer';
 
 export default function Home(): React.JSX.Element {
   return (
-    <>
-    {/* <Header /> */}
+    <Layout wrapperClassName="homepage" noFooter navbar={null}>
+      <Header />
       <main>
         <Hero />
-        <header />
         <MySkills />
         <ProjectHighlights />
         <Contact />
       </main>
       <Footer />
-    </>
+    </Layout>
   );
 }

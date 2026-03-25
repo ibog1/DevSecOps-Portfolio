@@ -1,6 +1,6 @@
 .header {
   background-color: #2f6fdd;
-  padding: 50px 0 0;
+  padding: 24px 0 0;
 }
 
 .container {
@@ -10,8 +10,10 @@
 
 .nav {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -20,10 +22,9 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 22px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 1.2;
   text-underline-offset: 4px;
   transition: transform 0.15s ease, text-decoration-color 0.15s ease;
-  transform-origin: left center;
 }
 
 .nav a:hover {

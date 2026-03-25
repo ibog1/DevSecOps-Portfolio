@@ -5,7 +5,7 @@ export default function Header(): React.JSX.Element {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <nav className={styles.nav}>
+        <nav className={styles.nav} aria-label="Portfolio sections">
           <a href="#about">About me</a>
           <a href="#skills">My skills</a>
           <a href="#projects">My projects</a>
