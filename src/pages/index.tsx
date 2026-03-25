@@ -12,6 +12,7 @@ export default function Home(): React.JSX.Element {
     {/* <Header /> */}
       <main>
         <Hero />
+        <header />
         <MySkills />
         <ProjectHighlights />
         <Contact />
